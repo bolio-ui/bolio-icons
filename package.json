@@ -14,7 +14,7 @@
   "scripts": {
     "prebuild": "rimraf src && rimraf dist",
     "build": "npm run svgr && rollup -c",
-    "svgr": "svgr --icon --title-prop --replace-attr-values '#1D1D1D=currentColor' -d src -- assets"
+    "svgr": "svgr --icon --title-prop --replace-attr-values '#000=currentColor' -d src -- assets"
   },
   "author": "Bruno Andrade",
   "license": "MIT",
