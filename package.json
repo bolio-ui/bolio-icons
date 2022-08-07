@@ -16,13 +16,13 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf node_modules",
+    "clean": "rimraf node_modules && yarn",
     "prebuild": "rimraf src && rimraf dist",
     "build": "npm run svgr && rollup -c",
     "svgr": "svgr --icon --title-prop --typescript --replace-attr-values '#000=currentColor' -d src -- assets",
     "release": "yarn build && yarn publish --access public --non-interactive"
   },
-  "author": "Bruno Andrade",
+  "author": "Bolio UI",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
