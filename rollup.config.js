@@ -1,17 +1,26 @@
-import { babel } from '@rollup/plugin-babel';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import resolve from '@rollup/plugin-node-resolve';
+import typescript from 'rollup-plugin-typescript2';
+import commonjs from '@rollup/plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
+import svgr from '@svgr/rollup';
+const packageJson = require('./package.json');
 
-const config = {
-  input: 'src/index.js',
-  output: {
-    file: 'dist/index.esm.js',
-    format: 'esm',
-  },
-  external: [/@babel\/runtime/, 'react'],
+export default {
+  input: 'src/index.ts',
+  output: [
+    {
+      dir: packageJson.main,
+      format: 'esm',
+      sourcemap: true,
+    },
+  ],
   plugins: [
-    babel({ babelHelpers: 'runtime', plugins: ['@babel/plugin-transform-runtime'] }),
+    peerDepsExternal(),
+    resolve(),
+    typescript({ useTsconfigDeclarationDir: true }),
+    commonjs(),
+    svgr(),
     filesize(),
   ],
 };
-
-export default config;
