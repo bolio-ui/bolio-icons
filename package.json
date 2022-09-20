@@ -1,35 +1,49 @@
 {
   "name": "@bolio-ui/icons",
-  "version": "1.0.0",
-  "description": "SVG Icons Bolio UI",
+  "version": "1.0.3",
+  "description": "The SVG icons components for Bolio UI.",
   "keywords": [
-    "React",
-    "SVG",
-    "Icons"
+    "bolio",
+    "bolio ui",
+    "react",
+    "components",
+    "icons",
+    "svg"
   ],
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
   "scripts": {
+    "clean": "rimraf node_modules && yarn",
     "prebuild": "rimraf src && rimraf dist",
     "build": "npm run svgr && rollup -c",
-    "svgr": "svgr --icon --title-prop --replace-attr-values '#000=currentColor' -d src -- assets",
+    "svgr": "svgr --icon --title-prop --typescript --replace-attr-values '#000=currentColor' -d src -- assets",
     "release": "yarn build && yarn publish --access public --non-interactive"
   },
-  "author": "Bruno Andrade",
+  "author": "Bolio UI",
   "license": "MIT",
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.16.4",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@svgr/cli": "^6.1.2",
+    "@svgr/rollup": "^6.3.1",
+    "@types/react": "^18.0.15",
+    "react": "^18.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.61.1",
-    "rollup-plugin-filesize": "^9.1.1"
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.4"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.16.3"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolio-ui/bolio-icons.git/"
+  },
+  "bugs": {
+    "url": "https://github.com/bolio-ui/bolio-icons/issues/"
+  },
+  "homepage": "https://icons.bolio-ui.com.br/"
 }
