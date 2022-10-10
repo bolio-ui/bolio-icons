@@ -22,7 +22,7 @@
     "svgr": "svgr --icon --title-prop --typescript --replace-attr-values '#000=currentColor' -d src -- assets",
     "release": "yarn build && yarn publish --access public --non-interactive"
   },
-  "author": "Bolio UI",
+  "author": "Bolio",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
@@ -40,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bolio-ui/bolio-icons.git/"
+    "url": "git+https://github.com/bolio/bolio-icons.git/"
   },
   "bugs": {
-    "url": "https://github.com/bolio-ui/bolio-icons/issues/"
+    "url": "https://github.com/bolio/bolio-icons/issues/"
   },
-  "homepage": "https://icons.bolio-ui.com.br/"
+  "homepage": "https://icons.bolio.com/"
 }
