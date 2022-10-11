@@ -40,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bolio/bolio-icons.git/"
+    "url": "git+https://github.com/bolio-ui/bolio-icons.git/"
   },
   "bugs": {
-    "url": "https://github.com/bolio/bolio-icons/issues/"
+    "url": "https://github.com/bolio-ui/bolio-icons/issues/"
   },
-  "homepage": "https://icons.bolio.com/"
+  "homepage": "https://icons.bolio-ui.com/"
 }
